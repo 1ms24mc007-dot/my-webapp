@@ -30,17 +30,4 @@ pipeline {
             }
         }
     }
-    
-    post {
-        success {
-            echo "Pipeline Successful"
-        }
-        failure {
-            echo "Pipeline Failed"
-        }
-        always {
-            echo "Cleaning Up WorkSpace"
-            deleteDir()
-        }
-    }
 }
