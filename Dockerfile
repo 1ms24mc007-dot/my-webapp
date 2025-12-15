@@ -1,7 +1,6 @@
-FROM python:3.10-slim
+FROM node:16
 WORKDIR /Desktop/dev/my-webapp
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
+RUN npm install
 EXPOSE 5000
-CMD ["python","app.py"]
+CMD ["node","server.js"]
