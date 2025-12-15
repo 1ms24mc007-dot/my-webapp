@@ -1,6 +1,6 @@
 FROM node:16
 WORKDIR /Desktop/dev/my-webapp
-COPY . .
+COPY package*.json ./
 RUN npm install
 EXPOSE 5000
 CMD ["node","server.js"]
